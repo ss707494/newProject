@@ -3,8 +3,9 @@
  */
 import {createStore, applyMiddleware} from 'redux'
 import {reducer} from '../commpoment/testRedux/actions'
-import thunk from 'redux-thunk'
+// import thunk from 'redux-thunk'
+import promiseMiddleware from 'redux-promise'
 
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(reducer, applyMiddleware(promiseMiddleware));
 export default store

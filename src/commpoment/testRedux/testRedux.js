@@ -9,9 +9,15 @@ import {
 } from 'react-native'
 import {connect} from 'react-redux'
 import {actions} from './actions'
+import {get_in_theaters} from '../../api/doubanApi'
 
 class testRedux extends Component {
     componentWillMount() {
+	    this.props.getListdata();
+	    // get_in_theaters()
+         //    .then(e=> {
+         //    });
+
     }
 
     render() {
@@ -36,7 +42,7 @@ class testRedux extends Component {
                 color="#841584"
                 accessibilityLabel="Learn more about this purple button"
             />
-
+            {props.listData.map(e=> (<Text key={e.id}>{e.title}</Text>))}
         </View>
     }
 }
