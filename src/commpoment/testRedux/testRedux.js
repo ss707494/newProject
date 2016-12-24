@@ -12,7 +12,6 @@ import {actions} from './actions'
 
 class testRedux extends Component {
     componentWillMount() {
-        // debugger
     }
 
     render() {
